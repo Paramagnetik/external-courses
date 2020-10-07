@@ -1,9 +1,6 @@
 function checkValue(str, obj) {
-    let keys = (`${[str]}`);
-    for (let key in obj) {
-        if (keys === key) {
-            return true;
-        }
+    if (obj.hasOwnProperty(str)) {
+        return true;
     }
 
     return false;

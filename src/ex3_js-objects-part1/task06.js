@@ -1,7 +1,8 @@
 function objCopy(obj) {
-    let objClone = {};
+    let objClone = {}
+    
     for (let key in obj) {
-        if (Array.isArray(obj)) {
+        if (typeof obj[key] === 'object') {
             objClone[key] = objCopy(obj[key]);
         } else {
             objClone[key] = obj[key];
