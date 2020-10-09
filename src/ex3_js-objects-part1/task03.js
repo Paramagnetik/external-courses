@@ -4,6 +4,6 @@ function checkValue(str, obj) {
     }
 
     return false;
-};
+}
 
 module.exports = checkValue;

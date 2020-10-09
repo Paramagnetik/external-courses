@@ -1,11 +1,11 @@
 function checkV(str, obj) {
-    for (let key in obj) {
-        if (str in obj) {
-            return obj;
-        }
+    let newObj = obj;
+
+    if (str in newObj) {
+        return newObj;
     }
-    object[str] = 'new';
-    return obj;
-};
+
+    return (newObj[str] = 'new');
+}
 
 module.exports = checkV;

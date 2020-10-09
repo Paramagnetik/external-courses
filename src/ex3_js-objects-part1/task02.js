@@ -4,6 +4,6 @@ function outputKeysValues(obj) {
     }
     
     return;
-};
+}
 
 module.exports = outputKeysValues;
