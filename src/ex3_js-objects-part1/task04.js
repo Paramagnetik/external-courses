@@ -3,6 +3,7 @@
 
     if (!(str in newObj)) {
         newObj[str] = 'new'
+        
         return newObj;
     }
 

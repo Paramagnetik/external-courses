@@ -1,15 +1,14 @@
 function objCopy(obj) {
-    let objClone = {}
+    let objClone = {};
 
     for (let key in obj) {
         if (Array.isArray(obj[key])) {
+            let arrayCopy = [];
+
             obj[key].forEach(item => {
-                if (typeof item === 'object') {
-                    objClone[key] = [objCopy(item)];
-                } else {
-                    objClone[key] = obj[key];
-                }
+                arrayCopy.push(objCopy(item));
             })
+            objClone[key] = arrayCopy;
         } else if (obj[key] !== Array.isArray(obj[key]) && typeof obj[key] === 'object') {
             objClone[key] = objCopy(obj[key]);
         } else {
