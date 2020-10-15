@@ -1,7 +1,5 @@
-function prototypeObject (values, obj) {
-   let key = Object.getPrototypeOf(obj)
-   
-   return key[values];
+function prototypeObject(values, obj) {
+   return Object.getPrototypeOf(obj)[values];
 }
 
 module.exports = prototypeObject;

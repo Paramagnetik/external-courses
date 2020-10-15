@@ -9,4 +9,5 @@ function symbolOfString(str) {
         console.log(`${i}:${obj[i]}`)
     }
 }
+
 module.exports = symbolOfString;

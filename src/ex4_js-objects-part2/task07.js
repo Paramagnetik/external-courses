@@ -1,11 +1,11 @@
-function string (str, num) {
-    let newStr
+function string(str, num) {
+    let lineLength;
+
     if (str.length > num) {
-        let ellips = '…'
-        let x = str.length - num;
-        newStr = str.substring(0, str.length - x -1) + ellips  
-    }
-    return newStr;
+        lineLength = str.length - num;
+    } 
+    
+    return (str.substring(0, str.length - lineLength - 1) + '…');
 }
 
 module.exports = string;

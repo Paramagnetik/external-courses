@@ -1,5 +1,8 @@
 function strNoSpace(str) {
-    return str.trim()
+    if (str[0] === ' ' && str[str.length - 1] === ' ') {
+        return str.slice(1, -1);
+    }
+    return str;
 }
 
 module.exports = strNoSpace;
