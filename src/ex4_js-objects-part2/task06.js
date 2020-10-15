@@ -3,10 +3,10 @@ function stringUp(str) {
     let newArr = [];
     
     for (let key of arr) {
-        newArr += key[0].toUpperCase() + key.slice(1) + ' ';
+        newArr.push(key[0].toUpperCase() + key.slice(1));
     }
 
-    return newArr;
+    return newArr.join(' ');
 }
 
 module.exports = stringUp;
