@@ -8,8 +8,9 @@ function objCopy(obj) {
             obj[key].forEach(item => {
                 arrayCopy.push(objCopy(item));
             })
+
             objClone[key] = arrayCopy;
-        } else if (obj[key] !== Array.isArray(obj[key]) && typeof obj[key] === 'object') {
+        } else if (typeof obj[key] === 'object') {
             objClone[key] = objCopy(obj[key]);
         } else {
             objClone[key] = obj[key];
