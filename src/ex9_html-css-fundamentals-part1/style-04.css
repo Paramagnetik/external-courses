@@ -1,0 +1,46 @@
+.box-shadow {
+    width: 200px; height: 100px;
+    background-color: #40c786;
+    box-shadow: 3px 4px 0px 1px #94d8b6, 7px 8px 0px 1px #b4dbc8ce;
+  }
+  .div1, .div2, .div3 {
+    width: 200px; height: 100px;
+    position: absolute;
+    margin: 10px 300px;
+  }
+  .div1 {
+    background-color: #b4dbc8ce;
+    top: 8px; 
+    left: 8px;
+  }
+  .div2 {
+    background-color: #94d8b6;
+    top: 4px; 
+    left: 4px;
+  }
+  .div3 {
+      background-color: #40c786;
+      top: 0px; 
+      left: 0px;
+  }
+  .pseudo {
+    width: 200px; height: 100px;
+    background-color: #b4dbc8ce;
+    margin: 33px 7px;
+  }
+  .pseudo:after {
+    width: 200px; 
+    height: 100px;
+    content: "";
+    position: absolute;
+    background-color: #40c786;
+    top: 130px; left: 5px;
+  }
+  .pseudo:before {
+    width: 200px; 
+    height: 100px;
+    content: "";
+    position: absolute;
+    background-color: #94d8b6;
+    top: 135px; left: 10px;
+  }
