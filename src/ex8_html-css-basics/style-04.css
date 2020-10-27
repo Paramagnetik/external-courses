@@ -1,0 +1,18 @@
+h3 {
+    background-color: blue;
+    text-align: center;
+}
+
+div {
+    background-image: url(https://freehtmlthemes.ru/assets/images/articles/css-fon.jpg);
+    width: 1000px;
+    font-family: 'Times New Roman', 'Verdana';
+    color: white;
+    
+}
+
+ol {
+    width: 17cm;
+    font-family: fantasy;
+    text-transform: lowercase;
+}
