@@ -3,34 +3,34 @@ class Calculator {
     constructor() {
         this.result = 0;
 
-        getResult = () => {
-            
+        this.getResult = () => {
+
             return this.result;
         }
 
-        reset = () => {
+        this.reset = () => {
             this.result = 0;
         }
 
-        add = (number = 0) => {
+        this.add = (number = 0) => {
             this.result += number;
 
             return this.add;
         }
 
-        subtract = (number = 0) => {
+        this.subtract = (number = 0) => {
             this.result -= number;
 
             return this.subtract;
         }
 
-        divide = (number = 1) => {
+        this.divide = (number = 1) => {
             this.result /= number;
 
             return this.divide;
         }
 
-        multiply = (number = 1) => {
+        this.multiply = (number = 1) => {
             this.result *= number;
 
             return this.multiply;
