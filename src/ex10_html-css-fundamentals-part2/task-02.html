@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://httpbin.org/" method="get">
+        <fieldset>
+            <legend>Personal data</legend>
+            <p>Surname <input type="text" id="surname"></p>
+            <p><label for="firstName">First name </label><input type="text" id="firstName"></p>
+            <p><label for="middleName">Middle name </label><input type="text" id="middleName"></p>
+            <p><label>You are <input type="radio" name="youAre">male </label><label><input type="radio"
+                    name="youAre">female </label>
+            </p>
+            <p><label for="age">Age </label><input type="text" id="age"></p>
+            <p><label for="countryOfResidence">Country of Residence </label><select id="countryOfResidence">
+                    <option>&nbsp;</option>
+                    <option>Russia</option>
+                </select></p>
+            <p><label>City <input type="checkbox" name="city">Ryazan </label><label><input type="checkbox"
+                        name="city"></label>Moscow
+            </p>
+            <p><label for="photography">Photography </label><input type="file" id="photography"></p>
+            <hr>
+            <label>Title </label><select name="Title" id="title" multiple size="8">
+                <optgroup label="Technologies">
+                    <option>Web Master</option>
+                    <option>Administrator</option>
+                    <option>Computer-aided design</option>
+                </optgroup>
+                <optgroup label="Finance">
+                    <option>Economic Planning</option>
+                    <option>Management accounting</option>
+                    <option>Budgeting and planning</option>
+                </optgroup>
+            </select>>
+            <p><label for="salary">Salary </label><input type="range" id='salary' min="18" max="101" step="1"></p>
+            <p><label for="textarea"></label><textarea id='textarea' name='Text' cols="40" rows="9"
+                    placeholder="Tell us about yourself..."></textarea></p>
+        </fieldset>
+        <fieldset>
+            <legend>Contact information</legend>
+            <p>Site <input type="url" id="site"></p>
+            <p>Email <input type="email" id="email"></p>
+            <p>Phone <input type="tel" id="phone"></p>
+        </fieldset>
+        <p>Password <input type="password" id="password" required></p>
+        <p><input type="submit" value="Отправить"> <input type="reset" value="Сбросить"></p>
+    </form>
+</body>
+
+</html>
