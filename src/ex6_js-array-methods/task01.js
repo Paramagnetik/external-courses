@@ -1,21 +1,20 @@
-function slice(array, begin, end) {
+function slice(array, begin = 0, end = array.length) {
     let arr = [];
-    let oneElem = begin;
+    let firstElem = begin;
     let lastElem = end;
 
-    if (oneElem < 0) {
-        oneElem = array.length + oneElem;
+    if (firstElem < 0) {
+        firstElem = array.length + firstElem;
     }
 
     if (lastElem < 0) {
         lastElem = array.length + lastElem;
     }
 
-    for (let i = oneElem; i < lastElem; i++) {
-            arr.push(array[i]);
+    for (let i = firstElem; i < lastElem; i++) {
+        arr.push(array[i]);
     }
 
     return arr;
 }
-
 module.exports = slice;
