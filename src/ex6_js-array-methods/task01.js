@@ -12,9 +12,13 @@ function slice(array, begin = 0, end = array.length) {
     }
 
     for (let i = firstElem; i < lastElem; i++) {
+        if (array[i] == undefined) {
+            continue;
+        }
         arr.push(array[i]);
     }
 
     return arr;
 }
+
 module.exports = slice;
