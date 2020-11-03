@@ -1,0 +1,19 @@
+.text-left {
+    text-align: left;
+}
+
+.first-letter-capitalize {
+    text-transform: capitalize;
+}
+
+.number {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.light-theme {
+    background-color: rgba(200, 227, 252, 0.767);
+}
+
+.line-color:hover {
+    background-color: rgb(153, 153, 153);
+}
