@@ -1,0 +1,46 @@
+ .button-text {
+    position: relative;
+    font-size: 14px;
+    background: rgba(233, 230, 233, 0.521);
+    font-weight:bold;
+    border: solid .5px rgb(196, 181, 181);
+    border-radius: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: inline-block;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.466);
+    color: rgba(31, 29, 29, 0.74);
+ }
+ .button {
+    position: relative;
+    background-color: rgb(207, 202, 202);
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid rgb(90, 89, 89);
+    box-shadow: 0px 0px 0px 1px white inset;
+    padding-left: 4px;
+    padding-right: 4px; 
+ }
+ .button-text:before {
+    position: absolute;
+    color: rgba(19, 19, 24, 0.452);
+    content: "\2605";
+    left: 5px;
+    bottom: 5px;
+    font-size: 17px;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.466);
+}
+button:after {
+    position: absolute;
+    color: rgba(19, 19, 24, 0.452);
+    content: "\2605";
+    right: 8px;
+    bottom: 9px;
+    font-size: 17px;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.466);
+}
+ button:hover {
+    cursor: pointer;
+}
