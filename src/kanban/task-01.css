@@ -86,20 +86,19 @@ header {
     border: none;
 }
 
-menu {
+section {
     display: flex;
     justify-content: space-between;
     margin: 20px;
     padding-bottom: 20px;
     overflow-x: scroll;
     scrollbar-color: #CBCBCB;
-    scrollbar-width: thin;
 }
 
 .list p {
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 21px;
     color: #000000;
 }
@@ -113,23 +112,17 @@ menu {
     background: #EBECF0;
     border-radius: 10px;
     padding: 5px;
-    max-height:250px;
+    max-height: 500px;
     overflow-y: auto;
     overflow-x: hidden;
+    height: 100%;
+    margin-left: 20px;
 }
 
 .list-li {
-    font-size: 18px;
     list-style-type: none;
-    background: #FFFFFF;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-.list-li li {
-    font-size: 21px;
-    font-weight: ;
-    line-height: 21px;
+    margin: 15px;
+    padding: 0;
 }
 
 .button-add {
@@ -139,7 +132,17 @@ menu {
     color: #5E6C84;
 }
 
-.button-add:before{
+li {
+    border: 1px solid black;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 4px;
+    font-size: 24px;
+    list-style-type: none;
+}
+
+.button-add:before {
     content: "\002B";
     color: #5E6C84;
 }
@@ -152,7 +155,8 @@ footer {
     padding: 10px 0;
 }
 
-.finished, .active-tasks {
+.finished,
+.active-tasks {
     display: flex;
     color: white;
 }
@@ -161,7 +165,7 @@ footer {
     margin-left: 20px;
 }
 
-.active-tasks p{
+.active-tasks p {
     margin-left: 50px;
 }
 
