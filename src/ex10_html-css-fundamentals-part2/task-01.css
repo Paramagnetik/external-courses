@@ -1,0 +1,10 @@
+img {
+   height: 250px;
+}
+#main {
+    border-radius: 50%;
+ }
+#clip-path {
+   clip-path: polygon(39% 24%, 70% 0%, 74% 34%, 100% 70%, 62% 76%, 30% 100%, 12% 64%, 0% 30%);
+ }
+ 
