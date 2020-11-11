@@ -8,7 +8,6 @@ div {
   width: 200px;
   margin-top: 100px;
   margin-left: 600px;
-  
 }
 
 input {
@@ -20,17 +19,20 @@ input {
 }
 
 label {
-  opacity: 1;
   color: #bdbdbd;
   font-size: 13px;
 }
 
-input:invalid + label {
+input:invalid+label {
   opacity: 0;
+  transform: translateY(10px);
 }
 
-input:focus + label {
+input+label {
   opacity: 1;
-  transition: 1s;
-  color:blue;
+  transition: 1.5s;
+}
+
+input:focus+label {
+  color: blue;
 }
