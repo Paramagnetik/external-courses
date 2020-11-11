@@ -15,12 +15,14 @@ function moveRight() {
     let img = document.createElement("img");
     let imageNumber = document.getElementsByClassName("image").length;
     const firstUl = document.getElementById("slider");
-    
+
     img.src = slider[next];
     img.classList.add("image");
     document.querySelector("#slider").appendChild(img);
 
-    setTimeout(function() {
+    setTimeout(() => img.classList.add("animate-right"), 0);
+
+    setTimeout(() => {
         if (imageNumber > 2) {
             firstUl.removeChild(firstUl.firstChild);
         }
@@ -32,7 +34,7 @@ function moveLeft() {
     if (next < 0) {
         next = slider.length + next;
     }
-    
+
     let img = document.createElement("img");
     let imageNumber = document.getElementsByClassName("image").length;
     const firstUl = document.getElementById("slider");
@@ -41,7 +43,9 @@ function moveLeft() {
     img.classList.add("image");
     document.querySelector("#slider").appendChild(img);
 
-    setTimeout(function() {
+    setTimeout(() => img.classList.add("animate-left"), 0);
+
+    setTimeout(function () {
         if (imageNumber > 2) {
             firstUl.removeChild(firstUl.firstChild);
         }

@@ -58,3 +58,35 @@
     left: 0;
     top: 0;
 }
+
+.animate-right {
+    animation-name: spinR;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes spinR {
+    0% {
+        transform: translateX(400px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+.animate-left {
+    animation-name: spinL;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes spinL {
+    0% {
+        transform: translateX(-400px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
