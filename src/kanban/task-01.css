@@ -6,6 +6,9 @@
 
 body {
     background: #0079BF;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 header {
@@ -88,6 +91,7 @@ header {
 }
 
 section {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     margin: 20px;
@@ -149,13 +153,11 @@ li {
 }
 
 footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
     background: #0067A3;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 10px 0;
 }
 
