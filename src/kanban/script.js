@@ -1,10 +1,10 @@
-const arrow = document.getElementById("arrow");
-const createMenu = document.getElementById("create-menu");
-const userMenu = document.getElementById("user-menu");
-const dropMenuUl = document.createElement("ul");
-const dropMenuLiOne = document.createElement("li");
-const dropMenuLiTwo = document.createElement("li");
-const dropMenuLiThree = document.createElement("li");
+const arrow = document.getElementById('arrow');
+const createMenu = document.getElementById('createMenu');
+const userMenu = document.getElementById('userMenu');
+const dropMenuUl = document.createElement('ul');
+const dropMenuLiOne = document.createElement('li');
+const dropMenuLiTwo = document.createElement('li');
+const dropMenuLiThree = document.createElement('li');
 
 dropMenuLiOne.innerText = "My account";
 dropMenuLiTwo.innerText = "My tasks";
@@ -21,7 +21,7 @@ const deleteMenu = () => {
 };
 
 userMenu.addEventListener('click', () => {
-    if (arrow.classList.contains("arrowUp")) {
+    if (arrow.classList.contains('arrowUp')) {
         deleteMenu();
     } else {
         insertMenu();
