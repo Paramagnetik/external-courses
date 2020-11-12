@@ -1,0 +1,38 @@
+* {
+  font-family: sans-serif;
+}
+
+div {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 200px;
+  margin-top: 100px;
+  margin-left: 600px;
+}
+
+input {
+  border: none;
+  margin-top: 5px;
+  font-size: 19px;
+  border-bottom: 1px solid #bdbdbd;
+  outline: none;
+}
+
+label {
+  color: #bdbdbd;
+  font-size: 13px;
+}
+
+input:invalid+label {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+input+label {
+  opacity: 1;
+  transition: 1.5s;
+}
+
+input:focus+label {
+  color: blue;
+}
