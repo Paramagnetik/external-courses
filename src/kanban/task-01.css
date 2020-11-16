@@ -76,13 +76,53 @@ header {
     display: flex;
 }
 
-.arrow {
+#arrow {
     background: none;
     border: none;
+    outline: none;
 }
+
+#arrow:hover {
+    cursor: pointer;
+}
+ 
+.arrow-ul {
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    margin-top: 50px;
+    margin-right: 10px;
+    z-index: 100;
+    border: 1px solid black;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.arrow-ul:hover {
+    cursor: pointer;
+}
+
+.arrow-ul li {
+    margin: auto;
+    font-weight: normal;
+    font-size: 18px;
+    border: none;
+}
+.arrow-ul li:hover {
+    background-color: rgb(115, 195, 248);
+}
+
+ .arrowUp{
+    transform:rotate(180deg);
+ }
 
 .user-menu {
     display: flex;
+    align-items: center;
+}
+
+.user-menu:hover {
+    cursor: pointer;
 }
 
 .button-new-list {
@@ -153,7 +193,6 @@ li {
 
 footer {
     width: 100%;
-    bottom: 0;
     background: #0067A3;
     display: flex;
     justify-content: space-between;
