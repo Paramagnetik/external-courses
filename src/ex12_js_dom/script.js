@@ -1,4 +1,4 @@
-let slides = document.querySelectorAll(".image");
+let slides = document.querySelectorAll('.image');
 let slider = [];
 for (let i = 0; i < slides.length; i++) {
     slider[i] = slides[i].src;
@@ -6,27 +6,27 @@ for (let i = 0; i < slides.length; i++) {
 }
 
 let next = 0;
+
 function moveRight() {
     next++;
-    if (next == slider.length) {
+    if (next === slider.length) {
         next = 0;
+    } 
+
+    let img = document.createElement('img');
+    const firstUl = document.getElementById('slider');
+    
+    img.src = slider[next];
+    img.classList.add('image');
+    img.classList.add('animate-right');
+    document.querySelector('#slider').appendChild(img);
+
+    if (document.getElementsByClassName('image').length > 2) {
+        firstUl.removeChild(firstUl.firstElementChild);
     }
 
-    let img = document.createElement("img");
-    let imageNumber = document.getElementsByClassName("image").length;
-    const firstUl = document.getElementById("slider");
-
-    img.src = slider[next];
-    img.classList.add("image");
-    document.querySelector("#slider").appendChild(img);
-
-    setTimeout(() => img.classList.add("animate-right"), 0);
-
-    setTimeout(() => {
-        if (imageNumber > 2) {
-            firstUl.removeChild(firstUl.firstChild);
-        }
-    }, 0);
+    firstUl.firstElementChild.className = 'image right-animate';
+    ;
 }
 
 function moveLeft() {
@@ -35,21 +35,19 @@ function moveLeft() {
         next = slider.length + next;
     }
 
-    let img = document.createElement("img");
-    let imageNumber = document.getElementsByClassName("image").length;
-    const firstUl = document.getElementById("slider");
+    let img = document.createElement('img');
+    const firstUl = document.getElementById('slider');
 
     img.src = slider[next];
-    img.classList.add("image");
-    document.querySelector("#slider").appendChild(img);
+    img.classList.add('image');
+    img.classList.add('animate-left')
+    document.querySelector('#slider').appendChild(img);
 
-    setTimeout(() => img.classList.add("animate-left"), 0);
+    if (document.getElementsByClassName('image').length > 2) {
+        firstUl.removeChild(firstUl.firstElementChild);
+    }
 
-    setTimeout(function () {
-        if (imageNumber > 2) {
-            firstUl.removeChild(firstUl.firstChild);
-        }
-    }, 1000);
+    firstUl.firstElementChild.className = 'image left-animate';
 }
 
-moveRight()
+moveLeft();

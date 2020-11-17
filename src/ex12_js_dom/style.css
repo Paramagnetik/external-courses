@@ -10,7 +10,7 @@
     margin: auto;
     height: 500px;
     width: 600px;
-    background: blueviolet;
+    overflow: hidden;
 }
 
 .arrow {
@@ -52,11 +52,9 @@
 }
 
 .image {
+    position: absolute;
     height: 500px;
     width: 600px;
-    position: absolute;
-    left: 0;
-    top: 0;
 }
 
 .animate-right {
@@ -67,7 +65,7 @@
 
 @keyframes spinR {
     0% {
-        transform: translateX(400px)
+        transform: translateX(600px)
     }
 
     100% {
@@ -83,10 +81,42 @@
 
 @keyframes spinL {
     0% {
-        transform: translateX(-400px)
+        transform: translateX(-600px)
     }
 
     100% {
         transform: translateX(0px)
+    }
+}
+
+.right-animate {
+    animation-name: Rspin;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes Rspin {
+    0% {
+        transform: translateX(0px)
+    }
+
+    100% {
+        transform: translateX(-600px)
+    }
+}
+
+.left-animate {
+    animation-name: Lspin;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes Lspin {
+    0% {
+        transform: translateX(0px)
+    }
+
+    100% {
+        transform: translateX(600px)
     }
 }
