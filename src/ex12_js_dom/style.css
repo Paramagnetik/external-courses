@@ -1,0 +1,122 @@
+.main {
+    position: relative;
+    height: 500px;
+    width: 600px;
+    margin: auto;
+}
+
+#slider {
+    position: relative;
+    margin: auto;
+    height: 500px;
+    width: 600px;
+    overflow: hidden;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.arrow-left {
+    left: 0%;
+    top: 50%;
+}
+
+.arrow-left::before {
+    content: '\21E6';
+    font-size: 30px;
+}
+
+.arrow-right::before {
+    content: '\21E8';
+    font-size: 30px;
+}
+
+.arrow-right {
+    top: 50%;
+    right: 0%;
+}
+
+.arrow:hover,
+.arrow:focus {
+    background-color: turquoise;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.image {
+    position: absolute;
+    height: 500px;
+    width: 600px;
+}
+
+.animate-right {
+    animation-name: spinR;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes spinR {
+    0% {
+        transform: translateX(600px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+.animate-left {
+    animation-name: spinL;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes spinL {
+    0% {
+        transform: translateX(-600px)
+    }
+
+    100% {
+        transform: translateX(0px)
+    }
+}
+
+.right-animate {
+    animation-name: Rspin;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes Rspin {
+    0% {
+        transform: translateX(0px)
+    }
+
+    100% {
+        transform: translateX(-600px)
+    }
+}
+
+.left-animate {
+    animation-name: Lspin;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes Lspin {
+    0% {
+        transform: translateX(0px)
+    }
+
+    100% {
+        transform: translateX(600px)
+    }
+}
