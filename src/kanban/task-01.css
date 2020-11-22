@@ -85,7 +85,7 @@ header {
 #arrow:hover {
     cursor: pointer;
 }
- 
+
 .arrow-ul {
     padding: 10px;
     position: absolute;
@@ -108,13 +108,14 @@ header {
     font-size: 18px;
     border: none;
 }
+
 .arrow-ul li:hover {
     background-color: rgb(115, 195, 248);
 }
 
- .arrowUp{
-    transform:rotate(180deg);
- }
+.arrowUp {
+    transform: rotate(180deg);
+}
 
 .user-menu {
     display: flex;
@@ -130,7 +131,6 @@ header {
 }
 
 section {
-    height: 100%;
     display: flex;
     justify-content: space-between;
     margin: 20px;
@@ -148,11 +148,13 @@ section {
 }
 
 .name {
+    padding: 15px;
     display: flex;
     justify-content: space-between;
 }
 
 .list {
+    flex-basis: 20%;
     background: #EBECF0;
     border-radius: 10px;
     padding: 5px;
@@ -174,6 +176,47 @@ section {
     font-size: 18px;
     border: none;
     color: #5E6C84;
+    outline: none;
+}
+
+.button-add:hover {
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 20px;
+    border: none;
+    color: #020202;
+    outline: none;
+}
+
+button:disabled:hover {
+    font-weight: normal;
+    font-size: 18px;
+    border: none;
+    color: #5E6C84;
+    outline: none;
+    cursor: auto;
+}
+
+.create-task-input {
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 4px;
+    font-size: 24px;
+    list-style-type: none;
+    background: rgb(220, 241, 255);
+}
+
+.create-task-select {
+    cursor: pointer;
+    padding: 10px;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+    background: rgb(220, 241, 255);
+    border-radius: 10px;
 }
 
 li {
@@ -186,9 +229,8 @@ li {
     list-style-type: none;
 }
 
-.button-add:before {
-    content: "\002B";
-    color: #5E6C84;
+.create-task-select>li:hover {
+    background-color: rgb(159, 249, 255);
 }
 
 footer {
