@@ -1,15 +1,14 @@
 let calculator = {
     result: 0,
 
-    setState(number) {
+    setState(number = this.result) {
         this.result = number;
         return this;
     },
 
-    fetchData() {
-        setTimeout(() => {
-            this.result = 500;
-        }, 1000);
+    fetchData(callback) {
+        setTimeout(() => callback(this.result = 500)
+            , 1000);
     },
 
     getResult() {
@@ -21,23 +20,23 @@ let calculator = {
         return this;
     },
 
-    add(number) {
+    add(number = 0) {
         this.result += number;
         return this;
     },
 
-    subtract(number) {
+    subtract(number = 0) {
         this.result -= number;
         return this;
     },
 
-    divide(number) {
-        this.result *= number;
+    divide(number = 1) {
+        this.result /= number;
         return this;
     },
 
-    multiply(number) {
-        this.result /= number;
+    multiply(number = 0) {
+        this.result *= number;
         return this;
     },
 }
