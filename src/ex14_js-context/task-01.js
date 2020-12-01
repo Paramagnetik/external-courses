@@ -43,6 +43,4 @@ let calculator = {
     },
 }
 
-calculator.fetchData(calculator.setState(500))
-calculator.getResult()
 module.exports = calculator;
