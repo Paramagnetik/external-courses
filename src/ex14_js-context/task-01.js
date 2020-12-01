@@ -7,7 +7,9 @@ let calculator = {
     },
 
     fetchData(callback) {
-        setTimeout(() => callback(this.result = 500)
+        setTimeout(() => {
+            callback(value).bind(calculator);
+        }
             , 1000);
     },
 
@@ -41,4 +43,6 @@ let calculator = {
     },
 }
 
+calculator.fetchData(calculator.setState(500))
+calculator.getResult()
 module.exports = calculator;
