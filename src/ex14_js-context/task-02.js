@@ -69,7 +69,7 @@ function Hangman(word) {
         this.arrError = [];
 
         for (let i = 0; i < this.wordCase.length; i++) {
-            this.words.push('_')
+            this.words.push('_');
         }
 
         return this;
