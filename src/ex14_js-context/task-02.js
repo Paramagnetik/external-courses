@@ -1,15 +1,15 @@
 function Hangman(word) {
-    this.wordCase = word.toLowerCase();
+    this.wordCase = word.toLowerCase().split("");
     this.error = 6;
     this.words = [];
     this.arrError = [];
 
-    this.getGuessedString = function () {
-        if (this.words.length) {
-            return this.words.join("");
-        }
+    for (let i = 0; i < this.wordCase.length; i++) {
+        this.words.push('_');
+    }
 
-        return "_".repeat(word.length);
+    this.getGuessedString = function () {
+        return this.words.join("");
     }
 
     this.getErrorsLeft = function () {
@@ -37,43 +37,40 @@ function Hangman(word) {
 
         if (this.wordCase.indexOf(this.letteCase) !== -1) {
 
-            for (let i = 0; i < this.wordCase.length; i++) {
-                if (this.words[i] === "_" && this.letteCase === this.wordCase[i]) {
-                    this.words[i] = this.letteCase;
-                } else {
-                    if (this.letteCase === this.wordCase[i]) {
-                        this.words[i] = this.letteCase;
-                    }
+            this.words = this.wordCase.map(function (el, i) {
 
-                    if (typeof this.words[i] === "string") {
-                    }
-                    else {
-                        this.words[i] = "_";
-                    }
+                if (this.letteCase === el) {
+                    return this.letteCase;
                 }
-            }
 
-            if (this.words.join("") === this.wordCase) {
+                return this.words[i];
+            }, this);
 
-                return console.log(`${this.words.join("")} | You won!`);
-            }
-            console.log(this.words.join(""));
-
-            return this;
-
-        } 
+        } else {
             this.arrError.push(this.letteCase);
             console.log(`wrong letter, errors left ${this.error -= 1} | ${this.arrError.join(',')}`);
 
             return this;
-        
+        }
+
+        if (this.words.join("") === this.wordCase.join("")) {
+            console.log(this.words.join(""), "| You won!");
+        } else {
+            return this.words.join("");
+        }
+
+        return this;
     }
 
     this.startAgain = function (newLetter) {
-        this.wordCase = newLetter.toLowerCase();
+        this.wordCase = newLetter.toLowerCase().split("");
         this.error = 6;
         this.words = [];
         this.arrError = [];
+
+        for (let i = 0; i < this.wordCase.length; i++) {
+            this.words.push('_')
+        }
 
         return this;
     }

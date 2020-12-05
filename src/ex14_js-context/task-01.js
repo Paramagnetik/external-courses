@@ -6,11 +6,12 @@ let calculator = {
         return this;
     },
 
-    fetchData(callback) {
+    fetchData(cb) {
         setTimeout(() => {
-            callback(value).bind(calculator);
+            cb(500);
         }
             , 1000);
+        return this;
     },
 
     getResult() {
@@ -42,5 +43,5 @@ let calculator = {
         return this;
     },
 }
-
+calculator.fetchData(calculator.setState)
 module.exports = calculator;
