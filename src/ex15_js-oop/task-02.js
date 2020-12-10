@@ -38,7 +38,7 @@ class Microwave extends Device {
 }
 
 class Room {
-    constructor(device = [new Kettle("Kettle"), new Chandelier("Chandelier"), new Microwave("Microwave")]) {
+    constructor(device) {
         this.devices = device;
     }
 
@@ -52,5 +52,5 @@ class Room {
     }
 }
 
-let bedroom = new Room;
-let device = new Device;
+let bEdroom = new Room([new Kettle("Kettle"), new Chandelier("Chandelier"), new Microwave("Microwave")]);
+let device = new Device("LG");

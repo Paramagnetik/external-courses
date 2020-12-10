@@ -8,12 +8,7 @@ function Present(sweetness) {
 }
 
 Present.prototype.sumWeight = function () {
-    let weight = 0;
-    this.sweetness.map(function (sweetness) {
-        weight += sweetness.weight
-    });
-
-    return weight;
+    return this.sweetness.reduce((accumulator, sweetness) => accumulator + sweetness.weight, 0);
 }
 
 Present.prototype.sorting = function () {
